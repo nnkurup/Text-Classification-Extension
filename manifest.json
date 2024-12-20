@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Text Classifier",
+    "version": "1.0",
+    "description": "Classify text as hate speech, terrorism, negativity, neutral, or positive.",
+    "permissions": ["activeTab"],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "toxic_images/toxic_16x16.png",
+        "48": "toxic_images/toxic_48x48.png",
+        "128": "toxic_images/toxic_128x128.png"
+      }
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
